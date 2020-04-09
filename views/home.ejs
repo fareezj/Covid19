@@ -1,0 +1,312 @@
+<%- include("./partials/header") %>
+
+<!-- Header -->
+<header class="mainHeader w3-display-container w3-content w3-wide" style="max-width:1600px;" id="home">
+  <img class="w3-image" src="/stylesheet/covid.jpg" alt="Architecture" width="1600" height="800">
+  <div class="mainDisplay w3-mobile w3-display-middle w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>COVID</b></span> <span class="w3-hide-small w3-text-light-grey">19</span></h1>
+    <table id=liveTable class="table">
+      <thead>
+        <th>Confirmed</th>
+        <th>Deaths</th>
+        <th>Recovered</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= a["result"]["confirmed"] %></td>
+          <td><%= a["result"]["deaths"] %></td>
+          <td><%= a["result"]["recovered"] %></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="lastUpdate">    Last Update: <%= a["date"] %>    </p>
+  </div>
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span id="mobileTitle" class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">COVID-19</span>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- <iframe src="https://ourworldindata.org/grapher/covid-cases-by-source?year=56" style="width: 100%; height: 600px; border: 0px none;"></iframe> -->
+  <div class="mobileData w2-container w3-padding-32" data-aos="flip-up" data-aos-delay="100">
+    <div id="mobileLiveTable">
+      <h2>COVID-19 Global Counts</h2>
+      <table id=mobileLiveTableData class="table w3-centered w3-card-4">
+        <thead>
+          <th>Confirmed</th>
+          <th>Deaths</th>
+          <th>Recovered</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= a["result"]["confirmed"] %></td>
+            <td><%= a["result"]["deaths"] %></td>
+            <td><%= a["result"]["recovered"] %></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="lastUpdateMobile">    Last Update: <%= a["date"] %>    </p>
+    </div>
+    <div class="containerButton">
+      <a href="/details" class="btn btn-primary btn-block" role="button" aria-disabled="true">Search By Country</a>
+      <a href="/allStats" class="btn btn-secondary btn-block" role="button" aria-disabled="true">View All Countries</a>
+    </div>
+
+  </div>
+
+
+  
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about" data-aos="flip-down" data-aos-delay="1000">
+    <img class="imgSearch" src="../stylesheet/searching.png">
+    <div class="aboutContent">
+      <h3 class="aboutTitle w3-border-bottom w3-border-light-grey w3-padding-16">What is COVID-19?</h3>
+      <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.</p>
+
+        <p>Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.</p>
+                        
+        <p>At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available.</p>
+    </div>
+  </div>
+
+  <!-- How Does it Spread Section -->
+  <div class="w3-container w3-padding-32" id="about" data-aos="flip-down" data-aos-delay="300">
+    <div class="HowContent">
+      <h3 class="aboutTitle w3-border-bottom w3-border-light-grey w3-padding-16">How does it spreading?</h3>
+
+      <p>The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).</p>
+      
+      <p>Close distance with other person could be one of the method to transmit the disease. (for example, handshake and talking in a close distance)</p>
+
+
+      <div class="container">
+        <div class="row" data-aos="fade-right" data-aos-delay="600">
+          <div class="col-lg order-1">
+            <img class="howImage1" src="../images/handshake.png">
+          </div>
+          <div class="col-lg order-2">
+            <h3 class="HowText1 w3-border-bottom w3-border-light-grey w3-padding-16">Handshake contact with the infected COVID-19 patient or carrier</h3>
+          </div>
+        </div>
+        <div class="row" data-aos="fade-left" data-aos-delay="900">
+          <div class="col-lg order-sm-12">
+            <img class="howImage2" src="../images/noConnection.png">
+          </div>
+          <div class="col-lg order-sm-1">
+            <h3 class="HowText1 w3-border-bottom w3-border-light-grey w3-padding-16">Close social distance (approx. 6 feet) to one another</h3>
+          </div>
+        </div>
+        <div class="row" data-aos="fade-right" data-aos-delay="1200">
+          <div class="col-lg order-1">
+            <img class="howImage1" src="../images/comments.png">
+          </div>
+          <div class="col-lg order-2">
+            <h3 class="HowText1 w3-border-bottom w3-border-light-grey w3-padding-16">Respiratory droplets produced when an infected person coughs, sneezes or talks</h3>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+  <!-- Symptoms Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <img class="imgSearch" src="../images/covid.png" data-aos="flip-up" data-aos-delay="1500">
+    <div class="aboutContent" data-aos="flip-down" data-aos-delay="1800">
+      <h3 class="aboutTitle w3-border-bottom w3-border-light-grey w3-padding-16">What are the symptoms?</h3>
+        <p>The COVID-19 virus affects different people in different ways.</p>
+
+        <p>COVID-19 is a respiratory disease and most infected people will develop mild to moderate symptoms and recover without requiring special treatment.</p>
+                        
+        <p> People who have underlying medical conditions and those over 60 years old have a higher risk of developing severe disease and death.</p>
+    </div>
+  </div>
+
+  <h3 class="theSymptom w3-padding-16">The Symptoms</h3>
+
+  <div class="container">
+    <div class="symptomRow row">
+      <div class="col-6 w3-center" data-aos="zoom-out-right" data-aos-delay="1800">
+        <img class="symptomsImg" src="../images/cough.png">
+        <h3>Cough</h3>
+      </div>
+      <div class="col-6 w3-center" data-aos="zoom-out-left" data-aos-delay="2100">
+        <img class="symptomsImg" src="../images/fever.png">
+        <h3>Fever</h3>
+      </div>
+    </div>
+    <div class="symptomRow row">
+      <div class="col-6 w3-center" data-aos="zoom-out-right" data-aos-delay="2400">
+        <img class="symptomsImg" src="../images/sore-throat.png">
+        <h3>Sore Throat</h3>
+      </div>
+      <div class="col-6 w3-center" data-aos="zoom-out-left" data-aos-delay="2700">
+        <img class="symptomsImg" src="../images/asthma.png">
+        <h3>Shortness of Breaths</h3>
+      </div>
+    </div>
+    <div class="symptomRow row">
+      <div class="col-6 w3-center" data-aos="zoom-out-right" data-aos-delay="3000">
+        <img class="symptomsImg" src="../images/rhinitis.png">
+        <h3>Runny Nose</h3>
+      </div>
+      <div class="col-6 w3-center" data-aos="zoom-out-left" data-aos-delay="3000">
+        <img class="symptomsImg" src="../images/cramps.png">
+        <h3>Aches or Pains</h3>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+
+
+  <span id='variableJSON' >
+    <%= JSON.stringify(chart["result"]); %>
+  </span>
+
+  <h1 class="graphTitle">Worldwide Graph of Covid-19 Disease</h1>
+
+  <div class="container" data-aos="fade-up-right">
+    <canvas id="myChart"></canvas>
+  </div>
+     
+
+
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Made By <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">Fareez Jasmi</a></p>
+</footer>
+
+</body>
+
+
+
+<script>
+
+AOS.init({
+    duration: 1200,
+  })
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+  	var mainHeader = $('.mainHeader').offset().top;
+    var mainHeaderHeight = $('.mainHeader').height();
+    var menu_pos = $('.navbar').offset().top;
+    var menu_height = $('.navbar').height();
+    var scroll = $(window).scrollTop();
+    
+    
+    if(menu_pos + 1 > mainHeader && menu_pos < (mainHeader + mainHeaderHeight)) {
+    	$('.navbar').addClass('menu_white');
+      $('.navbar').removeClass('menu_black');
+    }
+    else {
+    	$('.navbar').removeClass('menu_white');
+      $('.navbar').addClass('menu_black');
+    }
+    
+  })
+})
+
+
+
+  const dateLabels = [];
+  const confirmedLabels = [];
+  const deathsLabels = [];
+  const recoveredLabels = [];
+
+  var variableJSON = JSON.parse($('#variableJSON').text());
+  $('#variableJSON').remove();
+
+//FECTCHING DATE
+  Object.keys(variableJSON).forEach(covid => {
+    var result = covid;
+    dateLabels.push(result);
+  });
+
+//FETCHING CONFIRMED
+  Object.values(variableJSON).forEach(covid => {
+    var result = covid.confirmed;
+    confirmedLabels.push(result);
+  });
+
+//FETCHING DEATHS
+Object.values(variableJSON).forEach(covid => {
+    var result = covid.deaths;
+    deathsLabels.push(result);
+  });
+
+//FETCHING RECOVERED
+Object.values(variableJSON).forEach(covid => {
+    var result = covid.recovered;
+    recoveredLabels.push(result);
+  });
+
+  chartit();
+function chartit(){
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: dateLabels,
+            datasets: [{
+                label: "Confirmed COVID-19 Cases",
+                data: confirmedLabels,
+                fill: false,
+                backgroundColor: [
+                    'rgba(77, 5, 232, 1)',
+                ],
+                borderColor: [
+                    'rgba(77, 5, 232, 1)',
+                ],
+                borderWidth: 1
+            },{
+              label: "Deaths COVID-19 Cases",
+                data: deathsLabels,
+                fill: false,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            },{
+              label: "Recovered COVID-19 Cases",
+                data: recoveredLabels,
+                fill: false,
+                backgroundColor: [
+                    'rgba(123, 239, 178, 1)',
+                ],
+                borderColor: [
+                    'rgba(123, 239, 178, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+          maintainAspectRatio : false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                        
+                    }
+                }]
+            }
+        }
+    });
+}
+
+
+</script>
+
+
+</html>

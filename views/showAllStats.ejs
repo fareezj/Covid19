@@ -1,0 +1,47 @@
+<%- include("./partials/header") %>
+
+
+<div class="container">
+    
+        <div class="rowAllStats w3-row-padding">
+            <% data.forEach(function(covid) { %>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                        <div class="card">
+                        <div class="card-header"><%= covid["Country"] %></div>
+                        <div class="card-body">
+                            
+                            <table class="table table-bordered">
+                                
+                                <tbody>
+                                    <tr class="table-info">
+                                      <td>Total Confimed</td>
+                                      <td><%= covid["TotalConfirmed"] %></td>
+                                    </tr>      
+                                </tbody>
+                                <tbody>
+                                    <tr class="table-danger">
+                                      <td>Total Deaths:</td>
+                                      <td><%= covid["TotalDeaths"] %></td>
+                                    </tr>      
+                                </tbody>
+                                <tbody>
+                                    <tr class="table-success">
+                                      <td>Total Recovered</td>
+                                      <td><%= covid["TotalRecovered"] %></td>
+                                    </tr>      
+                                </tbody>
+                            </table>
+
+                        </div> 
+                        <div class="card-footer"></div>
+                        </div>
+                </div>   
+            <% }) %>   
+        </div>
+
+</div>
+
+
+
+
+<%- include("./partials/footer") %> 

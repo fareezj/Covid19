@@ -1,0 +1,26 @@
+<%- include("./partials/header") %>
+
+
+<div class="container searchMenu">
+        <h1>Search Affected Country</h1>
+        <div id="search">
+            <form action="/search" method="GET">
+                <input class="w3-input w3-border" type="text" placeholder="search country" name="search">
+                <label for="status">Status: </label>
+                <select class="form-control" id="status" name="status">
+                <option value="confirmed">Confirmed</option>
+                <option value="recovered">Recovered</option>
+                <option value="deaths">Deaths</option>
+                </select>
+
+                <input class="w3-button w3-black w3-section" type="Submit">
+            </form>
+        </div>
+</div>
+
+
+
+<%- include("./partials/footer") %>
+
+
+

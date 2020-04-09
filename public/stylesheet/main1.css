@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#mobileLiveTable, #mobileTitle, .containerButton{
+  display: none;
+}
+
+
+/* Mobile Screen */
+@media only screen and (max-width: 600px) {
+
+  .mainHeader .mainDisplay{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #liveTable, .lastUpdate{
+    display: none;
+  }
+
+  #mobileLiveTable, #mobileTitle, .containerButton{
+    display: inline;
+    text-align: center;
+    
+  }  
+
+
+
+  .lastUpdateMobile{
+    display: inline-block;
+    text-align: center;
+
+  }
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .mainHeader .mainDisplay {
+    background-attachment: scroll;
+    min-height: 700px;
+  }
+
+}
+
+
+.navbar.transparent.navbar-inverse .navbar-inner{
+  background: rgba(0,0,0,0.4);
+  
+}
+
+.mainHeader .mainDisplay{
+  height:auto;
+  max-width: 100%;
+}
+
+.w3-image{
+  filter: brightness(30%);
+}
+
+/* About Section */
+
+.aboutContent .HowContent{
+  margin: 0 10px 0 10px;
+  line-height: 30px;
+}
+
+.aboutTitle{
+  margin-top: 30px;
+}
+
+.imgSearch{
+  float: left;
+  height:auto;
+  min-height:240px;
+  max-height: 500px;
+  max-width: 100%;
+  margin: 0 50px 0 0;
+}
+
+/* How It Spread Style */
+
+.howImage1{
+  float: left;
+  height: auto;
+  max-height: 500px;
+  max-width: 100%;
+}
+
+.howImage2{
+  float: right;
+  height: auto;
+  max-height: 500px;
+  max-width: 100%;
+}
+
+.HowText1{
+  text-align: center;
+  margin-top: 5vh;
+}
+
+
+/* The Symptoms */
+
+
+.symptomsImg{
+  height: auto;
+  max-height: 250px;
+  max-width: 80%;
+  align-items: center;
+}
+
+.theSymptom{
+  margin: 0 10px 0 10px;
+}
+
+.symptomRow{
+  margin: 40px 0 10px 0;
+}
+
+
+/* Graph */
+
+.graphTitle{
+  text-align: center;
+}
+
+#myChart{
+  padding-top: 5vh;
+  height:auto;
+  min-height:240px;
+  max-height: 500px;
+  max-width: 100%;
+  width: 100%;
+}
+
+
+.menu_white{
+  color: white;
+}
+
+.menu_black{
+  color: white;
+  background: black;
+}
+
+
+
+
+
+.lastUpdate{
+  color: white;
+}
+
+.results, .container{
+  margin: 0 auto;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+#liveTable{
+  margin-top: 10vh;
+  color: white;
+  
+}
+
+
+
+
+.footer {
+  padding-top: 20vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.searchMenu{
+  width: 30%; 
+  margin: auto;
+  text-align: center;
+}
+
+
+#search form{
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  padding-top: 10vh;
+  text-align: center;
+}
+
+#search button{
+  position: absolute;
+  top: 50%;
+}
+
+input[type=text] {
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-bottom: 25px;
+  text-align: center;
+}

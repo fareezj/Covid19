@@ -1,0 +1,22 @@
+{
+  "name": "covid",
+  "version": "1.0.0",
+  "description": "covid-19",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Fareez",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.3",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "promise": "^8.1.0",
+    "request": "^2.88.2"
+  }
+}
